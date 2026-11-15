@@ -1,0 +1,83 @@
+Third-party notices for the MimikaVR runtime packs
+===================================================
+
+The runtime packs in this repository's releases contain the third-party software listed below, and nothing else.
+Each component remains the property of its authors and is redistributed, as part of MimikaVR, under the license named
+with it. The full texts of the MIT and zlib licenses are at the end of this file; the libtorch license file, as
+TorchSharp ships it, is in licenses/libtorch-LICENSE.txt.
+
+libtorch 2.10.0, the PyTorch C++ library, CUDA 12.8 build (NuGet libtorch-cuda-12.8-win-x64 2.10.0)
+  Files: torch.dll, torch_cpu.dll, torch_cuda.dll, torch_global_deps.dll, c10.dll, c10_cuda.dll, caffe2_nvrtc.dll
+  License: the PyTorch license (BSD 3-Clause style) and the licenses of the third-party code PyTorch includes, as
+  TorchSharp ships them: licenses/libtorch-LICENSE.txt. Copyright (c) 2016- Facebook, Inc. and the other copyright
+  holders named there.
+  Source: https://github.com/pytorch/pytorch
+
+NVIDIA CUDA 12.8 runtime libraries
+  Files: cudart64_12.dll, cublas64_12.dll, cublasLt64_12.dll, cufft64_11.dll, cufftw64_11.dll, curand64_10.dll,
+  cusolver64_11.dll, cusolverMg64_11.dll, cusparse64_12.dll, nvrtc64_120_0.dll, nvrtc64_120_0.alt.dll,
+  nvrtc-builtins64_128.dll, nvJitLink_120_0.dll, cupti64_2025.1.1.dll, nvperf_host.dll, nvToolsExt64_1.dll
+  License: the NVIDIA CUDA Toolkit End User License Agreement, under which these runtime files may be distributed as
+  part of an application: https://docs.nvidia.com/cuda/eula/index.html
+  Copyright (c) NVIDIA Corporation. All rights reserved.
+  These libraries came with libtorch, which is built against them. They need the NVIDIA graphics driver, which is not
+  part of MimikaVR.
+
+NVIDIA cuDNN 9.10.2
+  Files: cudnn64_9.dll, cudnn_adv64_9.dll, cudnn_cnn64_9.dll, cudnn_engines_precompiled64_9.dll,
+  cudnn_engines_runtime_compiled64_9.dll, cudnn_graph64_9.dll, cudnn_heuristic64_9.dll, cudnn_ops64_9.dll
+  License: the NVIDIA cuDNN Software License Agreement, under which the cuDNN runtime libraries may be distributed as
+  part of an application: https://docs.nvidia.com/deeplearning/cudnn/latest/reference/eula.html
+  Copyright (c) NVIDIA Corporation. All rights reserved.
+
+Intel OpenMP runtime (libiomp5md.dll, libiompstubs5md.dll)
+  Shipped with libtorch, which uses it for its CPU threads.
+  License: Intel's license for the OpenMP runtime it redistributes with its oneAPI libraries.
+  Copyright (c) Intel Corporation.
+
+libuv (uv.dll)
+  Shipped with libtorch.
+  License: MIT. Copyright (c) 2015-present libuv project contributors; portions Copyright Joyent, Inc. and other Node
+  contributors.
+  Source: https://github.com/libuv/libuv
+
+zlib 1.2.3 (zlibwapi.dll)
+  Shipped with libtorch (cuDNN's compression library).
+  License: zlib (text below). Copyright (C) 1995-2005 Jean-loup Gailly and Mark Adler.
+  Source: https://zlib.net
+
+
+MIT License
+-----------
+  Copyright (c) <year> <copyright holders>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+  documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+  persons to whom the Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+  Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+zlib License
+------------
+
+  Copyright (C) 1995-2005 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held
+  liable for any damages arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to
+  alter it and redistribute it freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software.
+     If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is
+     not required.
+  2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original
+     software.
+  3. This notice may not be removed or altered from any source distribution.
